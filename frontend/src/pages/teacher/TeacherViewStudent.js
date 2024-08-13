@@ -29,7 +29,7 @@ const TeacherViewStudent = () => {
     else if (error) { console.log(error) }
 
     const [sclassName, setSclassName] = useState('');
-    const [studentSchool, setStudentSchool] = useState('');
+    const [studentschool, setStudentschool] = useState('');
     const [subjectMarks, setSubjectMarks] = useState('');
     const [subjectAttendance, setSubjectAttendance] = useState([]);
 
@@ -45,7 +45,7 @@ const TeacherViewStudent = () => {
     useEffect(() => {
         if (userDetails) {
             setSclassName(userDetails.sclassName || '');
-            setStudentSchool(userDetails.school || '');
+            setStudentschool(userDetails.school || '');
             setSubjectMarks(userDetails.examResult || '');
             setSubjectAttendance(userDetails.attendance || []);
         }
@@ -74,7 +74,7 @@ const TeacherViewStudent = () => {
                     <br />
                     Class: {sclassName.sclassName}
                     <br />
-                    School: {studentSchool.schoolName}
+                    school: {studentschool.schoolName}
                     <br /><br />
 
                     <h3>Attendance:</h3>

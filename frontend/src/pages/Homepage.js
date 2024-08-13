@@ -17,12 +17,12 @@ const Homepage = () => {
                         <StyledTitle>
                             Welcome to
                             <br />
-                            College Management
+                            school Management
                             <br />
                             System
                         </StyledTitle>
                         <StyledText>
-                            Streamline College management, class organization, and add students and faculty.
+                            Streamline school management, class organization, and add students and faculty.
                             Seamlessly track attendance, assess performance, and provide feedback.
                             Access records, view marks, and communicate effortlessly.
                         </StyledText>

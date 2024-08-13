@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Grid, Box, Typography, Paper, Checkbox, FormControlLabel, TextField, CssBaseline, IconButton, InputAdornment, CircularProgress} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import bgpic from "../../assets/designlogin.jpg"
+import bgpic from "../../assets/designlogin.webp"
 import { LightPurpleButton } from '../../components/buttonStyles';
 import { registerUser } from '../../redux/userRelated/userHandle';
 import styled from 'styled-components';
@@ -28,7 +28,7 @@ const AdminRegisterPage = () => {
     const [emailError, setEmailError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
     const [adminNameError, setAdminNameError] = useState(false);
-    const [schoolNameError, setSchoolNameError] = useState(false);
+    const [schoolNameError, setschoolNameError] = useState(false);
     const role = "Admin"
 
     const handleSubmit = (event) => {
@@ -41,7 +41,7 @@ const AdminRegisterPage = () => {
 
         if (!name || !schoolName || !email || !password) {
             if (!name) setAdminNameError(true);
-            if (!schoolName) setSchoolNameError(true);
+            if (!schoolName) setschoolNameError(true);
             if (!email) setEmailError(true);
             if (!password) setPasswordError(true);
             return;
@@ -57,7 +57,7 @@ const AdminRegisterPage = () => {
         if (name === 'email') setEmailError(false);
         if (name === 'password') setPasswordError(false);
         if (name === 'adminName') setAdminNameError(false);
-        if (name === 'schoolName') setSchoolNameError(false);
+        if (name === 'schoolName') setschoolNameError(false);
     };
 
     useEffect(() => {
@@ -120,7 +120,7 @@ const AdminRegisterPage = () => {
                                 name="schoolName"
                                 autoComplete="off"
                                 error={schoolNameError}
-                                helperText={schoolNameError && 'School name is required'}
+                                helperText={schoolNameError && 'school name is required'}
                                 onChange={handleInputChange}
                             />
                             <TextField
@@ -198,7 +198,7 @@ const AdminRegisterPage = () => {
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-                        backgroundSize: 'cover',
+                        backgroundSize: '100 100',
                         backgroundPosition: 'center',
                     }}
                 />

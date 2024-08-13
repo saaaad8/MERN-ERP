@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Button, Grid, Box, Typography, Paper, Checkbox, FormControlLabel, TextField, CssBaseline, IconButton, InputAdornment, CircularProgress, Backdrop } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import bgpic from "../assets/designlogin.jpg"
+import bgpic from "../assets/designlogin.webp"
 import { LightPurpleButton } from '../components/buttonStyles';
 import styled from 'styled-components';
 import { loginUser } from '../redux/userRelated/userHandle';
@@ -265,8 +265,7 @@ const LoginPage = ({ role }) => {
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-                        backgroundSize: '1000 1000',
-                        backgroundPosition: 'center',
+                        backgroundSize: '100 100',
                     }}
                 />
             </Grid>

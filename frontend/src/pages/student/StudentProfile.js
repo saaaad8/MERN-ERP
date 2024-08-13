@@ -10,7 +10,7 @@ const StudentProfile = () => {
   else if (error) { console.log(error) }
 
   const sclassName = currentUser.sclassName
-  const studentSchool = currentUser.school
+  const studentschool = currentUser.school
 
   return (
     <>
@@ -48,7 +48,7 @@ const StudentProfile = () => {
             <Grid item xs={12}>
               <Box display="flex" justifyContent="center">
                 <Typography variant="subtitle1" component="p" textAlign="center">
-                  School: {studentSchool.schoolName}
+                  school: {studentschool.schoolName}
                 </Typography>
               </Box>
             </Grid>
