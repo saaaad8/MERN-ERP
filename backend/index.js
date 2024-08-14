@@ -8,12 +8,20 @@ const Routes = require("./routes/route.js")
 
 const PORT = process.env.PORT || 5000
 
+//changes for deployement
+const path = require ('path');
+
 dotenv.config();
 
 // app.use(bodyParser.json({ limit: '10mb', extended: true }))
 // app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }))
 
 app.use(express.json({ limit: '10mb' }))
+//deployement code
+const _dirname=path.dirname("")
+const buildpath = path.join(_dirname,"../frontend/build")
+app. use (express. static(buildpath)); 
+//deployement code
 app.use(cors())
 
 mongoose
@@ -22,7 +30,7 @@ mongoose
         useUnifiedTopology: true
     })
     .then(console.log("Connected to MongoDB"))
-    .catch((err) => console.log("NOT CONNECTED TO NETWORK", err))
+    .catch((err) => console.log("NOT CONNECTED TO MONGO NETWORK", err))
 
 app.use('/', Routes);
 
